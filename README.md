@@ -102,7 +102,7 @@ namespace Vendor\FooBar;
 
   - Namespaces declaration never begin by a backslash `Vendor\Space\Space`.
   
-  - There must be one blank line after the `namepsace` declaration.
+  - There must be one blank line before and after the `namepsace` declaration.
   
   - There must be one blank line after the block of `use` declaration.
   
