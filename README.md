@@ -17,13 +17,13 @@
 
 ## <a name='files'>Files</a>
 
-  - Use only ```UTF-8 without BOM```.
+  - Use only `UTF-8 without BOM`.
   
   - Use only the Unix LF (linefeed) line ending.
   
   - All PHP files must end with a single blank line.
 
-  - Use the long ```<?php ?>``` tags for non-views scripts.
+  - Use the long `<?php ?>` tags for non-views scripts.
 
 ```php
 <?php
@@ -31,19 +31,19 @@
 echo 'test';
 ```
 
-  - Use the short-echo ```<?= ?>``` tags for view scripts.
+  - Use the short-echo `<?= ?>` tags for view scripts.
 
 ```php
  <title><?= $title; ?></title>
 ```
 
-  - The closing ```?>``` tag must be omitted from files containing only PHP.
+  - The closing `?>` tag must be omitted from files containing only PHP.
   
-  - Limit on line length limit must be ```120 characters```.
+  - Limit on line length limit must be `120 characters`.
   
   - File must contain only one statement of namespace.
   
-  - Code must use ```4 spaces``` for indenting, not tabs.
+  - Code must use `4 spaces` for indenting, not tabs.
 
 ## <a name='lines'>Lines</a>
  
@@ -83,11 +83,11 @@ $foo = substr($foo, 0, 1);
 
 ## <a name='keywords'>Keywords</a>
 
-  - All PHP keywords must be in lower case (Eg: ```true```, ```false```, ```null```, etc.)
+  - All PHP keywords must be in lower case (Eg: `true`, `false`, `null`, etc.)
 
 ## <a name='namespaces-use'>Namespaces and use declarations</a>
 
-  - Namespaces names must be delcared in ```StudlyCaps```.
+  - Namespaces names must be delcared in `UpperCamelCase`.
 
 ```php
 // bad
@@ -100,15 +100,15 @@ namespace Vendor\foo_bar;
 namespace Vendor\FooBar;
 ```
 
-  - Namespaces declaration never begin by a backslash ```Vendor\Space\Space```.
+  - Namespaces declaration never begin by a backslash `Vendor\Space\Space`.
   
-  - There must be one blank line after the ```namepsace``` declaration.
+  - There must be one blank line after the `namepsace` declaration.
   
-  - There must be one blank line after the block of ```use``` declaration.
+  - There must be one blank line after the block of `use` declaration.
   
-  - ```use``` declaration must not separated by comma.
+  - `use` declaration must not separated by comma.
   
-  - ```use``` block declarations must be grouped by package:
+  - `use` block declarations must be grouped by package:
   
 ```php
 // bad
@@ -128,7 +128,7 @@ use Qux\Quux;
 use Qux\Corge\Grault;
 ```
 
-  - ```use``` alias declaration should be composed with sub-namespaces names.
+  - `use` alias declaration should be composed with sub-namespaces names.
 
 ```php
 // bad
@@ -160,7 +160,7 @@ $foo = 'bar';
 
 ### Block code comments
 
-  - You must add PHPDoc blocks for all classes, methods, and functions, but you can omit the ```@return``` tag if the method does not return anything.
+  - You must add PHPDoc blocks for all classes, methods, and functions, but you can omit the `@return` tag if the method does not return anything.
 
 ```php
 /**
@@ -173,7 +173,7 @@ class Foo
     /**
      * The description of bar
      *
-     * @param string $b	az The baz
+     * @param string $b az The baz
      * 
      * @return string The return of bar
      */    
@@ -188,7 +188,7 @@ class Foo
   - You must add PHPDoc blocks for all variable references.
 
 ```
-/** @var Bar\baz $foo Baz object */
+/** @var Bar\Baz $foo Baz object */
 $foo = $bar->baz();
 ```
 
@@ -205,7 +205,7 @@ class Foo
 }
 ```
 
-  - ```@todo``` and ```@fixme``` must be used in PHPDoc blocks like annotations.
+  - `@todo` and `@fixme` must be used in PHPDoc blocks like annotations.
 
 ```php
 /** @todo Think to check value */
@@ -219,7 +219,7 @@ $baz = 'qux';
 
 ### User variables
 
-  - Variables should be in ```lowerCamelCase```.
+  - Variables should be in `lowerCamelCase`.
 
 ```php
 // bad
@@ -272,15 +272,15 @@ $fooBarBazQux
 
 ### Global variables
 
-  - You must used ```$_POST```, ```$_GET``` and ```$_COOKIE``` instead of ```$_REQUEST```. If you use a framework, use ```Request``` component.
+  - You must used `$_POST`, `$_GET` and `$_COOKIE` instead of `$_REQUEST`. If you use a framework, use `Request` component.
 
 ## <a name='strings'>Strings</a>
 
-  - A string must be enclosed it in single quotes ```'hello'```.
+  - A string must be enclosed in single quotes `'hello'`.
 
-  - A concatenated string must use single quotes ```'$foo'.$bar```
+  - A concatenated string must use single quotes `'$foo'.$bar`
 
-  - A concatenated string must not use spaces around points ```'$foo'.    $bar```
+  - A concatenated string must not use spaces around points `'$foo'.$bar`
 
   - A string declaration in multiline must be aligned
 
@@ -307,13 +307,13 @@ $foo .= ' baz';
 
 ## <a name='arrays'>Arrays</a>
 
-  - The shorts arrays must be declared like this:
+  - Arrays with few data must be declared like this:
 
 ```php
 $foo = ['Bar', 'Baz'];
 ```
   
-  - The big arrays must be declared like this:
+  - Arrays with lots of data must be declared like this:
 
 ```php
 $foo = [
@@ -327,13 +327,13 @@ $foo = [
 ];
 ```
 
-  - For the big arrays, lines must be terminated by a comma. (Easy to copy/paste)
+  - For the arrays with lots of data, lines must be terminated by a comma. (Easy to copy/paste)
 
 ## <a name='classes'>Classes, Properties, and Methods</a>
 
 ### Classes
 
-  - The extends and implements keywords must be declared on the same line as the class name.
+  - The `extends` and `implements` keywords should be declared on the same line as the class name.
 
   - The opening brace for the class must go on its own line; the closing brace for the class must go on the next line after the body.
 
@@ -372,15 +372,9 @@ class Foo extends Bar implements
 /** @var string Foo */
 $foo = '';
 
-/** @var string Bar */
-protected $bar = '';
-
 // good
 /** @var string Foo */
 public $foo = '';
-
-/** @var string Bar */
-protected $bar = '';
 ```
 
   - There must not be more than one property declared per statement.
@@ -398,7 +392,7 @@ public $foo = '';
 protected $bar = '';
 ```
 
-  - Property names must not be prefixed with a single underscore to indicate protected or private visibility.
+  - Property names must not be prefixed with a single underscore to indicate `protected` or `private` visibility.
 
 ```php
 // bad
@@ -416,7 +410,7 @@ protected $bar = '';
 private $baz = '';
 ```
 
-  - When present, the ```static``` declaration must come after the visibility declaration.
+  - When present, the `static` declaration must come after the visibility declaration.
 
 ```php
 // bad
@@ -429,13 +423,54 @@ public static $foo = '';
 ```
 
 ### Methods
-  - Visibility must be declared on all methods. (Eg: ```public|protected|private foo()```)
+  - Visibility must be declared on all methods. (Eg: `public|protected|private foo()`)
 
-  - Method names should not be prefixed with a single underscore to indicate protected or private visibility. (Eg: ```protected foo()```)
+  - Method names should not be prefixed with a single underscore to indicate protected or private visibility.
 
-  - Method names must not be declared with a space after the method name. (Eg: ```public foo()```)
+```php
+// bad
+protected _foo()
+{
+    // Do something...
+}
 
-  - There must not be a space after the opening parenthesis, and there must not be a space before the closing parenthesis. (Eg: ```public foo()```)
+// good
+protected foo()
+{
+    // Do something...
+}
+```
+
+  - Method names must not be declared with a space after the method name.
+
+```php
+// bad
+public foo ()
+{
+    // Do something...
+}
+
+// good
+public foo ()
+{
+    // Do something...
+}
+```
+
+  - There must not be a space after the opening parenthesis, and there must not be a space before the closing parenthesis.
+
+```php
+// bad
+public foo () {
+    // Do something...
+ }
+
+// good
+public foo ()
+{
+    // Do something...
+}
+```
 
   - The opening brace must go on its own line, and the closing brace must go on the next line following the body.
 
@@ -495,9 +530,9 @@ public function foo(
 }
 ```
 
-  - When present, the ```abstract``` and ```final``` declarations must precede the visibility declaration.
+  - When present, the `abstract` and `final` declarations must precede the visibility declaration.
 
-  - When present, the ```static``` declaration must come after the visibility declaration.
+  - When present, the `static` declaration must come after the visibility declaration.
 
 ```php
 // bad
@@ -591,9 +626,9 @@ foo(
   
   - The body of each structure must be enclosed by braces. This standardizes how the structures look, and reduces the likelihood of introducing errors as new lines get added to the body.
 
-### ```if```, ```elseif```, ```else```
+### `if`, `elseif`, `else`
 
-- The keyword ```elseif``` should be used instead of ```else if``` so that all control keywords look like single words.
+- The keyword `elseif` should be used instead of `else if` so that all control keywords look like single words.
 
 #### Example
 
@@ -627,11 +662,11 @@ if (EXPRESSION) {
 }
 ```
 
-### ```switch``` and ```case```
+### `switch` and `case`
 
-  - The ```case``` statement must be indented once from ```switch```, and the ```break``` keyword (or other terminating keyword) must be indented at the same level as the ```case``` body.
+  - The `case` statement must be indented once from `switch`, and the `break` keyword (or other terminating keyword) must be indented at the same level as the `case` body.
   
-  - There must be a comment such as ```//``` no ```break``` when fall-through is intentional in a non-empty case body.
+  - There must be a comment such as `// no break` when fall-through is intentional in a non-empty case body.
   
 #### Example
 
@@ -651,6 +686,7 @@ switch (EXPRESSION) {
         break;
     case 1:
         // Do something with no break...
+        // no break
     case 2:
     case 3:
     case 4:
@@ -662,7 +698,7 @@ switch (EXPRESSION) {
 }
 ```
 
-### ```while``` and ```do while```
+### `while` and `do while`
 
 #### Example
 
@@ -690,7 +726,7 @@ do {
 } while (EXPRESSION);
 ```
 
-### ```for```
+### `for`
 
 #### Example
 
@@ -707,7 +743,7 @@ for ($i = 0; $i < 10; $i++) {
 }
 ```
 
-### ```foreach```
+### `foreach`
 
 #### Example
 
@@ -723,7 +759,7 @@ foreach ($iterable as $key => $value) {
     // Do something...
 }
 ```
-### ```try``` and ```catch```
+### `try` and `catch`
 
 #### Example
 
