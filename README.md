@@ -134,8 +134,14 @@ use Qux\Corge\Grault;
 // bad
 use Foo\Bar as Baz;
 
+// bad
+use Baz\Qux\Quux as BQQ;
+
 // good
 use Foo\Bar as FooBar;
+
+// good
+use Baz\Qux\Quux as BazQuxQuux;
 ```
 
 ## <a name='comments'>Comments</a>
