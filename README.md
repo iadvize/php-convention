@@ -1,0 +1,1 @@
+# iAdvize PHP Style Guide
