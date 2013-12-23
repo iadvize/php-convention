@@ -291,9 +291,9 @@ $fooBarBazQux
   - A string declaration in multiline must be aligned
 
 ```php
-$foo = 'Bar'.
-       'Baz'.
-       'Qux';
+$foo = 'Bar'
+      .'Baz'
+      .'Qux';
 ```
 
   - A string must not concatenate with functions or methods
