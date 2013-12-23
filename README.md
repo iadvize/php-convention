@@ -33,11 +33,11 @@ echo 'test';
 
   - Use the short-echo ```<?= ?>``` tags for view scripts.
 
-  - The closing ```?>``` tag must be omitted from files containing only PHP.
-
 ```php
  <title><?= $title; ?></title>
 ```
+
+  - The closing ```?>``` tag must be omitted from files containing only PHP.
   
   - Limit on line length limit must be ```120 characters```.
   
@@ -75,7 +75,7 @@ function bar()
 // bad
 $foo = substr(strtoupper('test'), 0, 1);
 
-// goog
+// good
 $foo = 'test';
 $foo = strtoupper($foo);
 $foo = substr($foo, 0, 1);
@@ -174,6 +174,7 @@ class Foo
      * The description of bar
      *
      * @param string $b	az The baz
+     * 
      * @return string The return of bar
      */    
     public function bar($baz)
