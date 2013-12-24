@@ -7,6 +7,7 @@
   1. [Keywords](#keywords)
   1. [Comments](#comments)
   1. [Variables](#variables)
+  1. [Type casting](#type-casting)
   1. [Namespaces and use declarations](#namespaces-use)
   1. [String](#strings)
   1. [Arrays](#arrays)
@@ -310,6 +311,16 @@ $foo = $foo.' baz';
 $foo  = ucfirst('bar');
 $foo .= ' baz';
 ```
+
+## <a name='type-casting'>Type casting</a>
+
+  - You must use `(int) $foo` instead of `intval($foo)`.
+
+  - You must use `(bool) $foo` instead of `boolval($foo)`.
+
+  - You must use `(float) $foo` instead of `floatval($foo)`.
+
+  - You must use `(string) $foo` instead of `strval($foo)`.
 
 ## <a name='arrays'>Arrays</a>
 
