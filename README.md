@@ -35,7 +35,7 @@ echo 'test';
   - Use the short-echo `<?= ?>` tags for view scripts.
 
 ```php
- <title><?= $title; ?></title>
+<title><?=∙$title;∙?></title>
 ```
 
   - The closing `?>` tag must be omitted from files containing only PHP.
@@ -230,13 +230,16 @@ $baz = 'qux';
 
 ```php
 // bad
-$_foo = '';
+$_foo='';
 
 // bad
 $foo_bar = '';
 
+// bad
+$fooBar='';
+
 // good
-$fooBar = '';
+$fooBar∙=∙'';
 ```
 
   - You must set off operators with spaces.
@@ -246,7 +249,7 @@ $fooBar = '';
 $foo = (5+6)/5;
 
 // good
-$foo = (5 + 6) / 5;
+$foo∙=∙(5∙+∙6)∙/∙5;
 ```
 
   - You must conserve a great alignment.
@@ -272,9 +275,9 @@ $fooBarBazQux->bar()->
 
 // good
 $fooBarBazQux
-    ->bar()
-    ->baz()
-    ->qux();
+∙∙∙∙->bar()
+∙∙∙∙->baz()
+∙∙∙∙->qux();
 ```
 
 ### Global variables
@@ -327,20 +330,20 @@ $foo .= ' baz';
   - Arrays with few data must be declared like this:
 
 ```php
-$foo = ['Bar', 'Baz'];
+$foo∙=∙['Bar',∙'Baz',∙'Qux'];
 ```
   
   - Arrays with lots of data must be declared like this:
 
 ```php
 $foo = [
-  'bar'  => 'abc',
-  'baz'  => 123,
-  'qux'  => true,
-  'quux' => [
-    'corge'  => [],
-    'grault' => 123.456,
-  ],
+∙∙∙∙'bar'∙∙=>∙'abc',
+∙∙∙∙'baz'∙∙=>∙123,
+∙∙∙∙'qux'∙∙=>∙true,
+∙∙∙∙'quux'∙=>∙[
+∙∙∙∙∙∙∙∙'corge'∙∙=>∙[],
+∙∙∙∙∙∙∙∙'grault'∙=>∙123.456,
+∙∙∙∙],
 ];
 ```
 
@@ -373,11 +376,11 @@ class Foo extends Bar implements Baz, Qux, Quux
 namespace Vendor\Foo;
 
 class Foo extends Bar implements
-    Baz,
-    Qux,
-    Quux
+∙∙∙∙Baz,
+∙∙∙∙Qux,
+∙∙∙∙Quux
 {
-    // Do something...
+∙∙∙∙// Do something...
 }
 ```
 
@@ -454,7 +457,7 @@ protected _foo()
 // good
 protected foo()
 {
-    // Do something...
+∙∙∙∙// Do something...
 }
 ```
 
@@ -462,13 +465,13 @@ protected foo()
 
 ```php
 // bad
-public foo ()
+public foo∙()
 {
     // Do something...
 }
 
 // good
-public foo ()
+public foo()
 {
     // Do something...
 }
@@ -478,12 +481,12 @@ public foo ()
 
 ```php
 // bad
-public foo () {
+public foo()∙{∙
     // Do something...
- }
+∙}
 
 // good
-public foo ()
+public foo()
 {
     // Do something...
 }
@@ -493,15 +496,8 @@ public foo ()
 
 ```php
 // bad
-public function foo() {
-    // Do something...
-}
-
-// bad
-public function foo ()
-{
-    // Do something...
-}
+public function foo()∙{
+    // Do something...}
 
 // good
 public function foo()
@@ -513,19 +509,19 @@ public function foo()
 
 ```php
 // bad
-public function foo($bar , &$baz , $qux = [])
+public function foo($bar∙,∙&$baz∙,∙$qux = [])
 {
     // Do something...
 }
 
 // bad
-public function foo( $bar, &$baz, $qux = [] )
+public function foo(∙$bar, &$baz, $qux = []∙)
 {
     // Do something...
 }
 
 // good
-public function foo($bar, &$baz, $qux = [])
+public function foo($bar,∙&$baz,∙$qux∙=∙[])
 {
     // Do something...
 }
@@ -539,9 +535,9 @@ public function foo($bar, &$baz, $qux = [])
 ```php
 // good
 public function foo(
-    $bar,
-    &$baz,
-    $qux = []
+∙∙∙∙$bar,
+∙∙∙∙&$baz,
+∙∙∙∙$qux = []
 ) {
     // Do something...
 }
@@ -574,8 +570,8 @@ final public static function bar()
 
 ```php
 // bad
-foo ();
-$bar->baz ();
+foo∙();
+$bar->baz∙();
 
 // good
 foo();
@@ -586,8 +582,8 @@ $bar->baz();
 
 ```php
 // bad
-foo( $qux );
-$bar->baz( $qux );
+foo(∙$qux∙);
+$bar->baz(∙$qux∙);
 
 // good
 foo($qux);
@@ -598,10 +594,10 @@ $bar->baz($qux);
 
 ```php
 // bad
-foo($bar , $baz , $qux);
+foo($bar∙,∙$baz∙,∙$qux);
 
 // good
-foo($bar, $baz, $qux);
+foo($bar,∙$baz,∙$qux);
 ```
 
   - Argument lists may be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list must be on the next line, and there must be only one argument per line.
@@ -620,9 +616,9 @@ foo($longFoo,
 
 // good
 foo(
-    $longFoo,
-    $longBar,
-    $longBaz
+∙∙∙∙$longFoo,
+∙∙∙∙$longBar,
+∙∙∙∙$longBaz
 );
 ```
 ## <a name='control-structures'>Control structures</a>
@@ -656,26 +652,31 @@ if(EXPRESSION){
 }
 
 // bad
+if (EXPRESSION) {
+// Do something...
+}
+
+// bad
 if (EXPRESSION)
 {
-   // Do something...
+    // Do something...
 }
 
 // bad
 if (EXPRESSION) {
-   // Do something...
+    // Do something...
 }
 else {
-   // Do something...
+    // Do something...
 }
 
 // good
-if (EXPRESSION) {
-   // Do something...
-} elseif (OTHER_EXPRESSION) {
-   // Do something...
-} else {
-   // Do something...
+if∙(EXPRESSION)∙{
+∙∙∙∙// Do something...
+}∙elseif∙(OTHER_EXPRESSION)∙{
+∙∙∙∙// Do something...
+}∙else∙{
+∙∙∙∙// Do something...
 }
 ```
 
@@ -690,12 +691,12 @@ if (EXPRESSION) {
 $foo = EXPRESSION ? 'bar' : OTHER_EXPRESSION ? 'baz' : 'qux';
 
 // good
-$foo = EXPRESSION ? 'bar' : 'baz';
+$foo∙=∙EXPRESSION∙?∙'bar'∙:∙'baz';
 
 // good
-$foo = EXPRESSION
-  ? 'bar'
-  : 'baz';
+$foo∙=∙EXPRESSION
+∙∙∙∙?∙'bar'
+∙∙∙∙:∙'baz';
 ```
 
 ### `switch` and `case`
@@ -716,21 +717,21 @@ switch(EXPRESSION)
 }
 
 // good
-switch (EXPRESSION) {
-    case 0:
-        // Do something...
-        break;
-    case 1:
-        // Do something with no break...
-        // no break
-    case 2:
-    case 3:
-    case 4:
-        // Do something with return instead of break...
-        return;
-    default:
-        // Do something in default case...
-        break;
+switch∙(EXPRESSION)∙{
+∙∙∙∙case∙0:
+∙∙∙∙∙∙∙∙// Do something...
+∙∙∙∙∙∙∙∙break;
+∙∙∙∙case∙1:
+∙∙∙∙∙∙∙∙// Do something with no break...
+∙∙∙∙∙∙∙∙// no break
+∙∙∙∙case∙2:
+∙∙∙∙case∙3:
+∙∙∙∙case∙4:
+∙∙∙∙∙∙∙∙// Do something with return instead of break...
+∙∙∙∙∙∙∙∙return;
+∙∙∙∙default:
+∙∙∙∙∙∙∙∙// Do something in default case...
+∙∙∙∙∙∙∙∙break;
 }
 ```
 
@@ -752,14 +753,14 @@ do
 } while(EXPRESSION);
 
 // good
-while (EXPRESSION) {
-    // Do something...
+while∙(EXPRESSION)∙{
+∙∙∙∙// Do something...
 }
 
 // good
-do {
-    // Do something...
-} while (EXPRESSION);
+do∙{
+∙∙∙∙// Do something...
+}∙while∙(EXPRESSION);
 ```
 
 ### `for`
@@ -774,8 +775,8 @@ for( $i=0;$i<10;$i++ )
 }
 
 // good
-for ($i = 0; $i < 10; $i++) {
-    // Do something...
+for∙($i∙=∙0;∙$i∙<∙10;∙$i++)∙{
+∙∙∙∙// Do something...
 }
 ```
 
@@ -785,14 +786,14 @@ for ($i = 0; $i < 10; $i++) {
 
 ```php
 // bad
-foreach( $iterable as $key=>$value )
+foreach( $foo as $key=>$value )
 {
     // Do something...
 }
 
 // good
-foreach ($iterable as $key => $value) {
-    // Do something...
+foreach∙($foo∙as∙$key∙=>∙$value)∙{
+∙∙∙∙// Do something...
 }
 ```
 ### `try` and `catch`
@@ -811,14 +812,14 @@ catch(FooException $e)
 }
 
 // good
-try {
-    // Do something...
-} catch (FooException $exception) {
-    // Do something...
-} catch (BarException $exception) {
-    // Do something...
-} finally {
-    // Do something...
+try∙{
+∙∙∙∙// Do something...
+}∙catch∙(FooException∙$exception)∙{
+∙∙∙∙// Do something...
+}∙catch∙(BarException∙$exception)∙{
+∙∙∙∙// Do something...
+}∙finally∙{
+∙∙∙∙// Do something...
 }
 ```
 
@@ -844,62 +845,62 @@ try {
 
 ```php
 // good
-$closureWithArguments = function ($foo, $bar) {
-    // Do something...
+$closureWithArguments∙=∙function∙($foo,∙$bar)∙{
+∙∙∙∙// Do something...
 };
 
 // good
-$closureWithArgumentsAndVariables = function ($foo, $bar) use ($baz, $qux) {
-    // Do something...
+$closureWithArgumentsAndVariables∙=∙function∙($foo,∙$bar)∙use∙($baz,∙$qux)∙{
+∙∙∙∙// Do something...
 };
 
 // good
-$longArgumentsNoVariables = function (
-    $longArgumentFoo,
-    $longArgumentBar,
-    $longArgumentBaz
-) {
-    // Do something...
+$longArgumentsNoVariables∙=∙function∙(
+∙∙∙∙$longArgumentFoo,
+∙∙∙∙$longArgumentBar,
+∙∙∙∙$longArgumentBaz
+)∙{
+∙∙∙∙// Do something...
 };
 
 // good
-$noArgumentsLongVariables = function () use (
-    $longVariableFoo,
-    $longVariablBar,
-    $longVariableBaz
-) {
-    // Do something...
+$noArgumentsLongVariables∙=∙function∙()∙use∙(
+∙∙∙∙$longVariableFoo,
+∙∙∙∙$longVariablBar,
+∙∙∙∙$longVariableBaz
+)∙{
+∙∙∙∙// Do something...
 };
 
 // good
-$longArgumentsLongVariables = function (
-    $longArgumentFoo,
-    $longArgumentBar,
-    $longArgumentBaz
-) use (
-    $longVariableFoo,
-    $longVariableBar,
-    $longVariableBaz
-) {
-    // Do something...
+$longArgumentsLongVariables∙=∙function∙(
+∙∙∙∙$longArgumentFoo,
+∙∙∙∙$longArgumentBar,
+∙∙∙∙$longArgumentBaz
+)∙use∙(
+∙∙∙∙$longVariableFoo,
+∙∙∙∙$longVariableBar,
+∙∙∙∙$longVariableBaz
+)∙{
+∙∙∙∙// Do something...
 };
 
 // good
-$longArgumentsShortVariables = function (
-    $longArgumentFoo,
-    $longArgumentBar,
-    $longArgumentBaz
-) use ($variableFoo) {
-    // Do something...
+$longArgumentsShortVariables∙=∙function∙(
+∙∙∙∙$longArgumentFoo,
+∙∙∙∙$longArgumentBar,
+∙∙∙∙$longArgumentBaz
+)∙use∙($variableFoo)∙{
+∙∙∙∙// Do something...
 };
 
 // good
-$shortArgumentsLongVariables = function ($argumentFoo) use (
-    $longVariableFoo,
-    $longVariableBar,
-    $longVariableBaz
-) {
-    // Do something...
+$shortArgumentsLongVariables∙=∙function∙($argumentFoo)∙use∙(
+∙∙∙∙$longVariableFoo,
+∙∙∙∙$longVariableBar,
+∙∙∙∙$longVariableBaz
+)∙{
+∙∙∙∙// Do something...
 };
 ```
 
@@ -907,10 +908,10 @@ $shortArgumentsLongVariables = function ($argumentFoo) use (
 
 ```php
 $foo->bar(
-    $argumentFoo,
-    function ($argumentBar) use ($variableFoo) {
-        // Do something...
-    },
-    $argumentBaz
+∙∙∙∙$argumentFoo,
+∙∙∙∙function∙($argumentBar)∙use∙($variableFoo)∙{
+∙∙∙∙∙∙∙∙// Do something...
+∙∙∙∙},
+∙∙∙∙$argumentBaz
 );
 ```
