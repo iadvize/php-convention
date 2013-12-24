@@ -679,6 +679,25 @@ if (EXPRESSION) {
 }
 ```
 
+### Ternary (`?:`)
+
+  - You should not use nesting ternary.
+
+#### Example
+
+```php
+// bad
+$foo = EXPRESSION ? 'bar' : OTHER_EXPRESSION ? 'baz' : 'qux';
+
+// good
+$foo = EXPRESSION ? 'bar' : 'baz';
+
+// good
+$foo = EXPRESSION
+  ? 'bar'
+  : 'baz';
+```
+
 ### `switch` and `case`
 
   - The `case` statement must be indented once from `switch`, and the `break` keyword (or other terminating keyword) must be indented at the same level as the `case` body.
