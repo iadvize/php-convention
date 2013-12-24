@@ -380,7 +380,7 @@ class Foo extends Bar implements
 ∙∙∙∙Qux,
 ∙∙∙∙Quux
 {
-∙∙∙∙// Do something...
+    // Do something...
 }
 ```
 
@@ -457,7 +457,7 @@ protected _foo()
 // good
 protected foo()
 {
-∙∙∙∙// Do something...
+    // Do something...
 }
 ```
 
