@@ -288,9 +288,9 @@ $fooBarBazQux
 
   - A string must be enclosed in single quotes `'hello'`.
 
-  - A concatenated string must use single quotes `'foo'.$bar`
+  - A concatenated string must use single quotes `'foo' . $bar`
 
-  - A concatenated string must not use spaces around points `'foo'.$bar`
+  - A concatenated string must use spaces around points `'foo' . $bar`
 
   - A string declaration in multiline must be aligned
 
@@ -304,11 +304,11 @@ $foo = 'Bar'
 
 ```php
 // bad
-$foo = ucfisrt('bar').' baz';
+$foo = ucfisrt('bar') . ' baz';
 
 // good
 $foo = ucfirst('bar');
-$foo = $foo.' baz';
+$foo = $foo . ' baz';
 
 // very good
 $foo  = ucfirst('bar');
