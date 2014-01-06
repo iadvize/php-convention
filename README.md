@@ -180,7 +180,7 @@ class Foo
     /**
      * The description of bar
      *
-     * @param string $b az The baz
+     * @param string $baz The baz
      * 
      * @return string The return of bar
      */    
@@ -288,9 +288,9 @@ $fooBarBazQux
 
   - A string must be enclosed in single quotes `'hello'`.
 
-  - A concatenated string must use single quotes `'$foo'.$bar`
+  - A concatenated string must use single quotes `'foo'.$bar`
 
-  - A concatenated string must not use spaces around points `'$foo'.$bar`
+  - A concatenated string must not use spaces around points `'foo'.$bar`
 
   - A string declaration in multiline must be aligned
 
@@ -449,13 +449,13 @@ public static $foo = '';
 
 ```php
 // bad
-protected _foo()
+protected function _foo()
 {
     // Do something...
 }
 
 // good
-protected foo()
+protected function foo()
 {
     // Do something...
 }
@@ -465,13 +465,13 @@ protected foo()
 
 ```php
 // bad
-public foo∙()
+public function foo∙()
 {
     // Do something...
 }
 
 // good
-public foo()
+public function foo()
 {
     // Do something...
 }
@@ -481,12 +481,12 @@ public foo()
 
 ```php
 // bad
-public foo()∙{∙
+public function foo()∙{∙
     // Do something...
 ∙}
 
 // good
-public foo()
+public function foo()
 {
     // Do something...
 }
