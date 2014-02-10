@@ -12,6 +12,7 @@
   1. [String](#strings)
   1. [Arrays](#arrays)
   1. [Classes, Properties, and Methods](#classes)
+  1. [Interfaces](#interfaces)
   1. [Function and Method Calls](#function-method-calls)
   1. [Control Structures](#control-structures)
   1. [Closures](#closures)
@@ -564,6 +565,27 @@ final public static function bar()
     // Do something...
 }
 ```
+## <a name='interfaces'>Interfaces</a>
+
+  - The interface name must be suffixed with `Interface`.
+
+
+```php
+<?php
+
+namespace Vendor\Foo;
+
+interface FooInterface
+{
+    /**
+     * Set Foo
+     *
+     * @param string $foo
+     */
+    public function setFoo($foo);
+}
+```
+
 ## <a name='function-method-calls'>Function and Method Calls</a>
 
   - There must not be a space between the method or function name and the opening parenthesis.
