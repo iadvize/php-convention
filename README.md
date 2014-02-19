@@ -612,9 +612,9 @@ trait FooTrait
     protected $bar;
 
     /**
-     * Set Foo
+     * Set Bar
      *
-     * @param string $foo
+     * @param string $bar
      */
     public function setBar($bar)
     {
