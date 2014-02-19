@@ -12,7 +12,7 @@
   1. [String](#strings)
   1. [Arrays](#arrays)
   1. [Classes, Properties, and Methods](#classes)
-  1. [Interfaces](#interfaces)
+  1. [Interfaces, Traits](#interfaces)
   1. [Function and Method Calls](#function-method-calls)
   1. [Control Structures](#control-structures)
   1. [Closures](#closures)
@@ -565,8 +565,9 @@ final public static function bar()
     // Do something...
 }
 ```
-## <a name='interfaces'>Interfaces</a>
+## <a name='interfaces'>Interfaces, Traits</a>
 
+### Interfaces
   - The interface name must be suffixed with `Interface`.
 
 
@@ -575,8 +576,41 @@ final public static function bar()
 
 namespace Vendor\Foo;
 
+/**
+ * Interface Foo
+ * 
+ * @package Vendor\Foo
+ */
 interface FooInterface
 {
+    /**
+     * Set Foo
+     *
+     * @param string $foo
+     */
+    public function setFoo($foo);
+}
+```
+
+### Traits
+  - The trait name must be suffixed with `Trait`.
+
+
+```php
+<?php
+
+namespace Vendor\Foo;
+
+/**
+ * Trait Foo
+ *
+ * @package Vendor\Foo
+ */
+trait FooTrait
+{
+    /** @var \Vendor\Bar */
+    protected $bar;
+
     /**
      * Set Foo
      *
