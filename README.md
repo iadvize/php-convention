@@ -616,7 +616,10 @@ trait FooTrait
      *
      * @param string $foo
      */
-    public function setFoo($foo);
+    public function setBar($bar)
+    {
+        $this->bar = $bar;
+    }
 }
 ```
 
