@@ -20,9 +20,9 @@
 ## <a name='files'>Files</a>
 
   - Use only `UTF-8 without BOM`.
-  
+
   - Use only the Unix LF (linefeed) line ending.
-  
+
   - All PHP files must end with a single blank line.
 
   - Use the long `<?php ?>` tags for non-views scripts.
@@ -40,17 +40,17 @@ echo 'test';
 ```
 
   - The closing `?>` tag must be omitted from files containing only PHP.
-  
+
   - Limit on line length limit must be `120 characters`.
-  
+
   - File must contain only one statement of namespace.
-  
+
   - Code must use `4 spaces` for indenting, not tabs.
 
 ## <a name='lines'>Lines</a>
- 
+
   - Blank lines may be added to improve readability and to indicate related blocks of code.
-  
+
 ```php
 // nah
 function foo()
@@ -70,7 +70,7 @@ function bar()
 }
 
 ```
-  
+
   - There must not be more than one statement per line.
 
 ```php
@@ -103,15 +103,15 @@ namespace Vendor\FooBar;
 ```
 
   - Namespaces declaration never begin by a backslash `Vendor\Space\Space`.
-  
+
   - There must be one blank line before and after the `namepsace` declaration.
-  
+
   - There must be one blank line after the block of `use` declaration.
-  
+
   - `use` declaration must not separated by comma.
-  
+
   - `use` block declarations must be grouped by package:
-  
+
 ```php
 // bad
 use Foo\Bar,
@@ -182,9 +182,9 @@ class Foo
      * The description of bar
      *
      * @param string $baz The baz
-     * 
+     *
      * @return string The return of bar
-     */    
+     */
     public function bar($baz)
     {
         // Returned value
@@ -333,7 +333,7 @@ $foo .= ' baz';
 ```php
 $foo∙=∙['Bar',∙'Baz',∙'Qux'];
 ```
-  
+
   - Arrays with lots of data must be declared like this:
 
 ```php
@@ -578,7 +578,7 @@ namespace Vendor\Foo;
 
 /**
  * Interface Foo
- * 
+ *
  * @package Vendor\Foo
  */
 interface FooInterface
@@ -681,6 +681,18 @@ foo(
 );
 ```
 
+    - Chained method call must be wrapped
+
+```php
+// bad
+$foo->bar()->baz($param)->getFoo();
+
+// good
+$foo->bar()
+    ->baz($param)
+    ->getFoo();
+```
+
   - When you pass an array as the only argument, the array brackets should be on the same lines as the method parenthesis.
 
 ```php
@@ -712,7 +724,7 @@ foo([
   - The structure body must be indented once
 
   - The closing brace must be on the next line after the body
-  
+
   - The body of each structure must be enclosed by braces. This standardizes how the structures look, and reduces the likelihood of introducing errors as new lines get added to the body.
 
 ### `if`, `elseif`, `else`
@@ -778,9 +790,9 @@ $foo∙=∙EXPRESSION
 ### `switch` and `case`
 
   - The `case` statement must be indented once from `switch`, and the `break` keyword (or other terminating keyword) must be indented at the same level as the `case` body.
-  
+
   - There must be a comment such as `// no break` when fall-through is intentional in a non-empty case body.
-  
+
 #### Example
 
 ```php
@@ -902,21 +914,21 @@ try∙{
 ## <a name='closures'>Closures</a>
 
   - Closures must be declared with a space after the function keyword, and a space before and after the use keyword.
-  
+
   - The opening brace must go on the same line, and the closing brace MUST go on the next line following the body.
-  
+
   - There must not be a space after the opening parenthesis of the argument list or variable list, and there must not be a space before the closing parenthesis of the argument list or variable list.
-  
+
   - In the argument list and variable list, there must not be a space before each comma, and there must be one space after each comma.
-  
+
   - Closure arguments with default values must go at the end of the argument list.
 
   - Argument lists and variable lists may be split across multiple lines, where each subsequent line is indented once.
-  
+
   - When doing so, the first item in the list must be on the next line, and there must be only one argument or variable per line.
-  
+
   - When the ending list (whether or arguments or variables) is split across multiple lines, the closing parenthesis and opening brace must be placed together on their own line with one space between them.
-  
+
 ### Example (declaration)
 
 ```php
