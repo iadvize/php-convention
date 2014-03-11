@@ -681,7 +681,7 @@ foo(
 );
 ```
 
-    - Chained method call must be wrapped
+  - Chained method call must be wrapped
 
 ```php
 // bad
