@@ -687,13 +687,13 @@ foo(
 // bad
 foo(
     [
-        'key' => $value
+        'foo' => 'bar',
     ]
 );
 
 // good
 foo([
-    'key' => $value
+    'foo' => 'bar',
 ]);
 ```
 
