@@ -681,7 +681,7 @@ foo(
 );
 ```
 
-  - When you pass an array as the only parameter, the array brackets should be on the same lines as the method parenthesis.
+  - When you pass an array as the only argument, the array brackets should be on the same lines as the method parenthesis.
 
 ```php
 // bad
