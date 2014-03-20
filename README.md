@@ -680,6 +680,23 @@ foo(
 ∙∙∙∙$longBaz
 );
 ```
+
+  - When you pass an array as the only argument, the array brackets should be on the same lines as the method parenthesis.
+
+```php
+// bad
+foo(
+    [
+        'foo' => 'bar',
+    ]
+);
+
+// good
+foo([
+    'foo' => 'bar',
+]);
+```
+
 ## <a name='control-structures'>Control structures</a>
 
 ### General
