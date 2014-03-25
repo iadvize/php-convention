@@ -16,6 +16,7 @@
   1. [Function and Method Calls](#function-method-calls)
   1. [Control Structures](#control-structures)
   1. [Closures](#closures)
+  1. [Best practices](#best-practices)
 
 ## <a name='files'>Files</a>
 
@@ -991,3 +992,11 @@ $foo->bar(
 ∙∙∙∙$argumentBaz
 );
 ```
+
+## <a name='best-practices'>Best practicies</a>
+
+### Date
+
+  - You must use `new \DateTime('2014-01-01 00:00:00')` instead of `date('2014-01-01 00:00:00')`.
+
+  - You must use `new \DateTime('Sunday')` instead of `strtotime('Sunday')`.
