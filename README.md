@@ -681,7 +681,7 @@ foo(
 );
 ```
 
-  - Chained method call must be wrapped before the first call and indented once.
+  - Chained method calls must be wrapped before the first call and indented once.
 
 ```php
 // bad
