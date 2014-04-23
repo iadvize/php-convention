@@ -681,16 +681,16 @@ foo(
 );
 ```
 
-  - Chained method call must be wrapped
+  - Chained method call must be wrapped before the first call and indented once.
 
 ```php
 // bad
-$foo->bar()->baz($param)->getFoo();
+$fooBar->baz()->qux($param);
 
 // good
-$foo->bar()
-    ->baz($param)
-    ->getFoo();
+$fooBar
+    ->baz()
+    ->qux($param);
 ```
 
   - When you pass an array as the only argument, the array brackets should be on the same lines as the method parenthesis.
