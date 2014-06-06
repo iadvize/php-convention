@@ -41,7 +41,7 @@ echo 'test';
 
   - The closing `?>` tag must be omitted from files containing only PHP.
 
-  - Limit on line length limit must be `120 characters`.
+  - Limit on line length limit must be `200 characters`.
 
   - File must contain only one statement of namespace.
 
