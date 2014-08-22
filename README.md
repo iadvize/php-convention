@@ -693,6 +693,24 @@ $fooBar
     ->qux($param);
 ```
 
+  - Allows fluent-interface chained calls syntax
+  
+```php
+// bad
+$this->getFoo();
+
+// bad
+$this->getFoo()
+    ->getBar()
+    ->getBar();
+
+// good
+$this
+    ->getFoo()
+        ->getBar()
+        ->getBar();
+```
+
   - When you pass an array as the only argument, the array brackets should be on the same lines as the method parenthesis.
 
 ```php
