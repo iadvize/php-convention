@@ -6,6 +6,7 @@
   1. [Lines](#lines)
   1. [Keywords](#keywords)
   1. [Comments](#comments)
+  1. [Naming](#naming)
   1. [Variables](#variables)
   1. [Type casting](#type-casting)
   1. [Namespaces and use declarations](#namespaces-use)
@@ -223,26 +224,33 @@ $foo = 'bar';
 $baz = 'qux';
 ```
 
-## <a name='variables'>Variables</a>
+## <a name='naming'>Naming</a>
 
-### User variables
-
-  - Variables should be explicit.
+  - Clarity over brevity in variable, method and class names
 
 ```php
 // bad
 $o = new Object();
 
-// bad
-for($i = 0; $i < 0; $i++)
-
 // good
 $object = new Object();
 
-// good
-for($index = 0; $index < 0; $index++)
+// bad
+class A {}
 
+// good
+class Substracter {}
+
+// bad
+public function doIt () {}
+
+// good
+public function associateChannelToOperator () {}
 ```
+
+## <a name='variables'>Variables</a>
+
+### User variables
 
   - Variables should be in `lowerCamelCase`.
 
