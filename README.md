@@ -232,17 +232,17 @@ $baz = 'qux';
 // bad
 $o = new Object();
 
-// good
-$object = new Object();
-
 // bad
 class A {}
 
-// good
-class Substracter {}
-
 // bad
 public function doIt () {}
+
+// good
+$object = new Object();
+
+// good
+class Substracter {}
 
 // good
 public function associateChannelToOperator () {}
