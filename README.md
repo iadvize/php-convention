@@ -236,7 +236,7 @@ $o = new Object();
 class A {}
 
 // bad
-public function doIt () {}
+public function doIt() {}
 
 // good
 $object = new Object();
@@ -245,7 +245,7 @@ $object = new Object();
 class Substracter {}
 
 // good
-public function associateChannelToOperator () {}
+public function associateChannelToOperator() {}
 ```
 
 ## <a name='variables'>Variables</a>
