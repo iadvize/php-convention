@@ -6,6 +6,7 @@
   1. [Lines](#lines)
   1. [Keywords](#keywords)
   1. [Comments](#comments)
+  1. [Naming](#naming)
   1. [Variables](#variables)
   1. [Type casting](#type-casting)
   1. [Namespaces and use declarations](#namespaces-use)
@@ -221,6 +222,38 @@ $foo = 'bar';
 
 /** @fixme Change qux to quux */
 $baz = 'qux';
+```
+
+## <a name='naming'>Naming</a>
+
+  - Clarity over brevity in variable, method and class names
+
+```php
+// bad
+$o = new Object();
+
+// bad
+class A
+{
+}
+
+// bad
+public function doIt()
+{
+}
+
+// good
+$object = new Object();
+
+// good
+class Substracter
+{
+}
+
+// good
+public function associateChannelToOperator()
+{
+}
 ```
 
 ## <a name='variables'>Variables</a>
