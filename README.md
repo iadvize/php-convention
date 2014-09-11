@@ -227,6 +227,23 @@ $baz = 'qux';
 
 ### User variables
 
+  - Variables should be explicit.
+
+```php
+// bad
+$o = new Object();
+
+// bad
+for($i = 0; $i < 0; $i++)
+
+// good
+$object = new Object();
+
+// good
+for($index = 0; $index < 0; $index++)
+
+```
+
   - Variables should be in `lowerCamelCase`.
 
 ```php
