@@ -233,19 +233,27 @@ $baz = 'qux';
 $o = new Object();
 
 // bad
-class A {}
+class A
+{
+}
 
 // bad
-public function doIt() {}
+public function doIt()
+{
+}
 
 // good
 $object = new Object();
 
 // good
-class Substracter {}
+class Substracter
+{
+}
 
 // good
-public function associateChannelToOperator() {}
+public function associateChannelToOperator()
+{
+}
 ```
 
 ## <a name='variables'>Variables</a>
