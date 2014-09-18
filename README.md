@@ -1004,7 +1004,7 @@ $foo->bar(
 ### Readibility
 
   - When possible, avoid nestings of more than 2 levels and prefer "return early" structures.
-Tant que possible éviter les imbrications de plus de 2 levels et préférer du "return early"
+
 
 ```php
 // bad
