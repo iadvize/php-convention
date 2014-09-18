@@ -17,6 +17,7 @@
   1. [Function and Method Calls](#function-method-calls)
   1. [Control Structures](#control-structures)
   1. [Closures](#closures)
+  1. [Best practices](#best-practices)
 
 ## <a name='files'>Files</a>
 
@@ -1036,3 +1037,45 @@ $foo->bar(
 ∙∙∙∙$argumentBaz
 );
 ```
+
+## <a name='best-practices'>Best practices</a>
+
+### Date
+
+  - You must use `new \DateTime('2014-01-01 00:00:00')` instead of `date('2014-01-01 00:00:00')`.
+
+  - You must use `new \DateTime('Sunday')` instead of `strtotime('Sunday')`.
+
+### Readibility
+
+  - When possible, avoid nestings of more than 2 levels and prefer "return early" structures.
+
+
+```php
+// bad
+$response = [];
+if ($foo) {
+    foreach($foo->getBars() as $bar) {
+        if ($bar->hasBaz()) {
+            // 3 nested levels
+        }
+    }
+}
+return $response;
+
+
+// good
+$response = [];
+if (!$foo) {
+    return $response;
+}
+
+foreach($foo->getBars() as $bar) {
+    if ($bar->hasBaz()) {
+        // only 2 nested levels
+    }
+}
+return $response;
+```
+
+  
