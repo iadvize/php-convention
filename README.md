@@ -1055,7 +1055,7 @@ $foo->bar(
 // bad
 $response = [];
 if ($foo) {
-    foreach($foo->getBars() as $bar) {
+    foreach ($foo->getBars() as $bar) {
         if ($bar->hasBaz()) {
             // 3 nested levels
         }
@@ -1070,7 +1070,7 @@ if (!$foo) {
     return $response;
 }
 
-foreach($foo->getBars() as $bar) {
+foreach ($foo->getBars() as $bar) {
     if ($bar->hasBaz()) {
         // only 2 nested levels
     }
