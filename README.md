@@ -283,8 +283,6 @@ public function isPluginEnabled() {}
 public function isVisible() {}
 ```
 
-  
-
 ## <a name='variables'>Variables</a>
 
 ### User variables
