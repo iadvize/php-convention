@@ -283,6 +283,22 @@ public function isPluginEnabled() {}
 public function isVisible() {}
 ```
 
+  - `DateTime` variable names should be a past participle form ending with `At`.
+
+```php
+// bad
+$dateUpdate = new \DateTime;
+
+// bad
+$endDate = new \DateTime;
+
+// good
+$updatedAt = new \DateTime;
+
+// good
+$lastLoggedAt = new \DateTime;
+```
+
 ## <a name='variables'>Variables</a>
 
 ### User variables
