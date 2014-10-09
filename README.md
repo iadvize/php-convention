@@ -1120,4 +1120,23 @@ foreach ($foo->getBars() as $bar) {
 return $response;
 ```
 
-  
+### Always qualify objects you use
+   - you must add `@var` tag when you get object from abstract method
+
+```php
+// bad
+$logger = $this->getServiceLocator()->get('logger');
+
+// bad
+$this->getServiceLocator()->get('AwesomeFactory')->createAwesomeness();
+
+// good
+/** @var LoggerInterface $logger */
+$logger = $this->getServiceLocator()->get('logger');
+
+// good
+/** @var AwesomeFactory $logger */
+$redisFactory = $this->getServiceLocator()->get('AwesomeFactory');
+$redisFactory->createAwesomeness()
+
+```
