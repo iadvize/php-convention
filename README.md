@@ -214,6 +214,57 @@ class Foo
     public $bar = '';
 }
 ```
+  - You must not use full qualified class name in PHPDoc blocks. This means you have to declare the class name with a use declaration even if she is not referenced elsewhere from the PHPBlock.
+
+```php
+// Bad
+namespace Vendor\Bar\Baz;
+
+/**
+ * Foo
+ *
+ * @package Vendor\Bar\Baz
+ */
+class Foo
+{
+    /** @var \Other\MyClass $myClass */
+    protected $myClass;
+
+    /**
+     * @return \Other\MyClass
+     */
+    public function getMyClass()
+    {
+      return $this->myClass;
+    }
+}
+```
+
+```php
+// Good
+namespace Vendor\Bar\Baz;
+
+use Other\MyClass;
+
+/**
+ * Foo
+ *
+ * @package Vendor\Bar\Baz
+ */
+class Foo
+{
+    /** @var MyClass $myClass */
+    protected $myClass;
+
+    /**
+     * @return MyClass
+     */
+    public function getMyClass()
+    {
+      return $this->myClass;
+    }
+}
+```
 
   - `@todo` and `@fixme` must be used in PHPDoc blocks like annotations.
 
