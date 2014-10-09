@@ -257,6 +257,48 @@ public function associateChannelToOperator()
 }
 ```
 
+  - `Boolean` variable names should be either an adjective or a past participle form.
+    Associated getter method should begin with `is` or `has`.
+
+```php
+// bad
+$enablePlugin = true;
+
+// bad
+public function getEnablePlugin() {}
+
+// bad
+public function getPluginEnabled() {}
+
+// good
+$pluginEnabled = true;
+
+// good
+$visible = true;
+
+// good
+public function isPluginEnabled() {}
+
+// good
+public function isVisible() {}
+```
+
+  - `DateTime` variable names should be a past participle form ending with `At`.
+
+```php
+// bad
+$dateUpdate = new \DateTime;
+
+// bad
+$endDate = new \DateTime;
+
+// good
+$updatedAt = new \DateTime;
+
+// good
+$lastLoggedAt = new \DateTime;
+```
+
 ## <a name='variables'>Variables</a>
 
 ### User variables
