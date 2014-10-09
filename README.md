@@ -1135,9 +1135,9 @@ $this->getServiceLocator()->get('AwesomeFactory')->createAwesomeness();
 $logger = $this->getServiceLocator()->get('logger');
 
 // good
-/** @var AwesomeFactory $logger */
-$redisFactory = $this->getServiceLocator()->get('AwesomeFactory');
-$redisFactory->createAwesomeness()
+/** @var AwesomeFactory $awesomeFactory */
+$awesomeFactory = $this->getServiceLocator()->get('AwesomeFactory');
+$awesomeFactory->createAwesomeness()
 
 ```
    - you musn't add `@var` tag when you get object from explicit method
