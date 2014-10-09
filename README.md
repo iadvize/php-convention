@@ -1140,3 +1140,41 @@ $redisFactory = $this->getServiceLocator()->get('AwesomeFactory');
 $redisFactory->createAwesomeness()
 
 ```
+   - you musn't add `@var` tag when you get object from explicit method
+
+```php
+// bad
+/**
+ * Class AwesomeFactory
+ */
+class AwesomeFactory
+{
+    /**
+     * @return Awesome
+     */
+     public function createAwesomeness()
+     {
+         return Awesome();
+     }
+}
+$awesomeFactory = new AwesomeFactory();
+/** @var Awesome $awesome */
+$awesome = $awesomeFactory->createAwesomeness();
+
+// good
+/**
+ * Class AwesomeFactory
+ */
+class AwesomeFactory
+{
+    /**
+     * @return Awesome
+     */
+     public function createAwesomeness()
+     {
+         return Awesome();
+     }
+}
+$awesomeFactory = new AwesomeFactory();
+$awesome = $awesomeFactory->createAwesomeness();
+```
