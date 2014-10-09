@@ -212,7 +212,7 @@ class Foo
     public $bar = '';
 }
 ```
-  - You must not use full qualified class name in PHPDoc blocks.
+  - You must not use full qualified class name in PHPDoc blocks. This means you have to declare the class name with a use declaration even if she is not referenced elsewhere from the PHPBlock.
 
 ```php
 // Bad
