@@ -1176,5 +1176,5 @@ class AwesomeFactory
      }
 }
 $awesomeFactory = new AwesomeFactory();
-$awesome = $awesomeFactory->createAwesomeness();
+$awesome        = $awesomeFactory->createAwesomeness();
 ```
