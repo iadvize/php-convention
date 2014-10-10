@@ -227,7 +227,7 @@ $baz = 'qux';
 
 
 ### Always qualify objects you use
-   - you must add `@var` tag when you get object from abstract method
+   - you should add `@var` tag when you get object from abstract method
 
 ```php
 // bad
@@ -246,7 +246,7 @@ $awesomeFactory = $this->getServiceLocator()->get('AwesomeFactory');
 $awesomeFactory->createAwesomeness()
 
 ```
-   - you musn't add `@var` tag when you get object from explicit method
+   - you shouldn't add `@var` tag when you get object from explicit method
 
 ```php
 // bad
