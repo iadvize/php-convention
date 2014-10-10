@@ -276,6 +276,66 @@ $foo = 'bar';
 $baz = 'qux';
 ```
 
+
+### Qualify objects you use
+   - you should add `@var` tag when you get object from abstract method
+
+```php
+// bad
+$logger = $this->getServiceLocator()->get('logger');
+
+// bad
+$this->getServiceLocator()->get('AwesomeFactory')->createAwesomeness();
+
+// good
+/** @var LoggerInterface $logger */
+$logger = $this->getServiceLocator()->get('logger');
+
+// good
+/** @var AwesomeFactory $awesomeFactory */
+$awesomeFactory = $this->getServiceLocator()->get('AwesomeFactory');
+$awesomeFactory->createAwesomeness()
+
+```
+   - you shouldn't add `@var` tag when you get object from explicit method
+
+```php
+// bad
+/**
+ * Class AwesomeFactory
+ */
+class AwesomeFactory
+{
+    /**
+     * @return Awesome
+     */
+     public function createAwesomeness()
+     {
+         return Awesome();
+     }
+}
+$awesomeFactory = new AwesomeFactory();
+/** @var Awesome $awesome */
+$awesome = $awesomeFactory->createAwesomeness();
+
+// good
+/**
+ * Class AwesomeFactory
+ */
+class AwesomeFactory
+{
+    /**
+     * @return Awesome
+     */
+     public function createAwesomeness()
+     {
+         return Awesome();
+     }
+}
+$awesomeFactory = new AwesomeFactory();
+$awesome        = $awesomeFactory->createAwesomeness();
+```
+
 ## <a name='naming'>Naming</a>
 
   - Clarity over brevity in variable, method and class names
@@ -1170,5 +1230,3 @@ foreach ($foo->getBars() as $bar) {
 }
 return $response;
 ```
-
-  
