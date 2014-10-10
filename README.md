@@ -226,7 +226,7 @@ $baz = 'qux';
 ```
 
 
-### Always qualify objects you use
+### Qualify objects you use
    - you should add `@var` tag when you get object from abstract method
 
 ```php
