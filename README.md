@@ -515,10 +515,10 @@ $foo .= ' baz';
 
 ```php
 // good
-$foo∙=∙(cast)∙$bar;
+$foo∙=∙(string)∙$bar;
 
 // bad
-$foo∙=∙(cast)$bar;
+$foo∙=∙(string)$bar;
 ```
 
 ## <a name='arrays'>Arrays</a>
