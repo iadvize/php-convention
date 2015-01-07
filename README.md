@@ -513,6 +513,14 @@ $foo .= ' baz';
 
   - You must use `(string) $foo` instead of `strval($foo)`.
 
+```php
+// bad
+$foo∙=∙(string)$bar;
+
+// good
+$foo∙=∙(string)∙$bar;
+```
+
 ## <a name='arrays'>Arrays</a>
 
   - Arrays with few data must be declared like this:
