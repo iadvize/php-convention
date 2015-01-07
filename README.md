@@ -514,7 +514,11 @@ $foo .= ' baz';
   - You must use `(string) $foo` instead of `strval($foo)`.
 
 ```php
-$foo∙=∙(string)∙$bar;
+// good
+$foo∙=∙(cast)∙$bar;
+
+// bad
+$foo∙=∙(cast)$bar;
 ```
 
 ## <a name='arrays'>Arrays</a>
