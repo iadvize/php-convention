@@ -585,11 +585,11 @@ class Foo extends Bar implements
 
 ```php
 // bad
-/** @var string $foo Property description */
+/** @var string Property description */
 $foo = '';
 
 // good
-/** @var string $foo Property description */
+/** @var string Property description */
 public $foo = '';
 ```
 
@@ -601,10 +601,10 @@ public $foo = '',
        $bar = '';
 
 // good
-/** @var string $foo Property description */
+/** @var string Property description */
 public $foo = '';
 
-/** @var string $bar Property description */
+/** @var string Property description */
 protected $bar = '';
 ```
 
@@ -612,17 +612,17 @@ protected $bar = '';
 
 ```php
 // bad
-/** @var string $_bar Property description */
+/** @var string Property description */
 protected $_bar = '';
 
-/** @var string $_baz Property description */
+/** @var string Property description */
 private $_baz = '';
 
 // good
-/** @var string $bar Property description */
+/** @var string Property description */
 protected $bar = '';
 
-/** @var string $baz Property description */
+/** @var string Property description */
 private $baz = '';
 ```
 
