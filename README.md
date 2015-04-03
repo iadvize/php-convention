@@ -523,6 +523,8 @@ $foo∙=∙(string)∙$bar;
 
 ## <a name='arrays'>Arrays</a>
 
+  - You must use `[]` notation instead of `array()`.
+
   - Arrays with few data must be declared like this:
 
 ```php
