@@ -1,0 +1,20 @@
+{
+  "name": "iadvize/php-convention",
+  "description": "Iadvize PHP conventions",
+  "keywords": [
+    "convention",
+    "quality",
+    "php"
+  ],
+  "version": "0.1.0",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Rémy Théroux",
+      "email": "remy.theroux@iadvize.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6"
+  }
+}
