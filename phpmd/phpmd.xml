@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<ruleset name="iAdvize"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                     http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        Iadvize mess detector
+    </description>
+
+    <!-- Code Size -->
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+        <properties>
+            <property name="reportLevel" value="5" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/NPathComplexity">
+        <properties>
+            <property name="minimum" value="200"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/ExcessiveMethodLength">
+        <properties>
+            <property name="minimum" description="The method size reporting threshold" value="50"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/ExcessiveClassLength">
+        <properties>
+            <property name="minimum" description="The class size reporting threshold"  value="500"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/ExcessiveParameterList">
+        <properties>
+            <property name="minimum" description="The parameter count reporting threshold" value="7"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/ExcessivePublicCount">
+        <properties>
+            <property name="minimum" description="The public item reporting threshold" value="20"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/TooManyFields">
+        <properties>
+            <property name="maxfields" description="The field count reporting threshold " value="15"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/TooManyMethods">
+        <properties>
+            <property name="maxmethods" description="The method count reporting threshold " value="20"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/ExcessiveClassComplexity">
+        <properties>
+            <property name="maximum" description="The maximum WMC tolerable for a class." value="100"/>
+        </properties>
+    </rule>
+
+    <!-- Clean code -->
+    <rule ref="rulesets/cleancode.xml">
+        <exclude name="NestedScopes"/>
+        <exclude name="ElseExpression"/>
+        <exclude name="StaticAccess"/>
+        <exclude name="BooleanArgumentFlag"/>
+    </rule>
+
+    <rule ref="rulesets/cleancode.xml/StaticAccess">
+        <properties>
+            <property name="exceptions" value="\Cache,\Validator,\DateTime,\Doctrine\Common\Collections\ArrayCollection,parent"/>
+        </properties>>
+    </rule>
+
+    <rule ref="rulesets/cleancode.xml/BooleanArgumentFlag" />
+
+    <!-- Controversial -->
+    <rule ref="rulesets/controversial.xml" />
+
+    <!-- Design -->
+    <rule ref="rulesets/design.xml/ExitExpression" />
+    <rule ref="rulesets/design.xml/EvalExpression" />
+    <rule ref="rulesets/design.xml/GotoStatement" />
+    <rule ref="rulesets/design.xml/NumberOfChildren">
+        <properties>
+            <property name="minimum" value="10" description="Maximum number of acceptable child classes." />
+        </properties>
+    </rule>
+    <rule ref="rulesets/design.xml/DepthOfInheritance">
+        <properties>
+            <property name="minimum" value="3" description="Maximum number of acceptable parent classes." />
+        </properties>
+    </rule>
+    <rule ref="rulesets/design.xml/CouplingBetweenObjects">
+        <properties>
+            <property name="minimum" value="11" description="Maximum number of acceptable dependencies." />
+        </properties>
+    </rule>
+
+    <!-- Naming -->
+    <rule ref="rulesets/naming.xml">
+        <exclude name="LongVariable"/>
+        <exclude name="ShortVariable"/>
+        <exclude name="ShortMethodName"/>
+        <exclude name="ConstructorWithNameAsEnclosingClass"/>
+        <exclude name="ConstantNamingConventions"/>
+        <exclude name="BooleanGetMethodName"/>
+    </rule>
+    <rule ref="rulesets/naming.xml/ShortVariable">
+        <properties>
+            <property name="minimum" description="Minimum length for a variable, property or parameter name" value="3"/>
+            <property name="exceptions" value="id,em,e"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/naming.xml/ShortMethodName">
+        <properties>
+            <property name="minimum" description="Minimum length for a method or function name" value="4"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/naming.xml/ConstructorWithNameAsEnclosingClass">
+        <properties/>
+    </rule>
+    <rule ref="rulesets/naming.xml/ConstantNamingConventions"/>
+    <rule ref="rulesets/naming.xml/BooleanGetMethodName">
+        <properties>
+            <property name="checkParameterizedMethods" value="false" description="Applies only to methods without parameter when set to true" />
+        </properties>
+    </rule>
+
+    <!-- Unused code -->
+    <rule ref="rulesets/unusedcode.xml" />
+</ruleset>
