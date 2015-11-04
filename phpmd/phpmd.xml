@@ -106,7 +106,7 @@
     </rule>
     <rule ref="rulesets/naming.xml/ShortMethodName">
         <properties>
-            <property name="minimum" description="Minimum length for a method or function name" value="4"/>
+            <property name="minimum" exceptions="get" description="Minimum length for a method or function name" value="3"/>
         </properties>
     </rule>
     <rule ref="rulesets/naming.xml/ConstructorWithNameAsEnclosingClass">
