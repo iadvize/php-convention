@@ -176,7 +176,6 @@ $foo = 'bar';
 /**
  * Foo
  *
- * @package Vendor\Bar\Baz
  */
 class Foo
 {
@@ -206,7 +205,6 @@ $foo = $bar->baz();
 /**
  * Foo
  *
- * @package Vendor\Bar\Baz
  */
 class Foo
 {
@@ -223,7 +221,6 @@ namespace Vendor\Bar\Baz;
 /**
  * Foo
  *
- * @package Vendor\Bar\Baz
  */
 class Foo
 {
@@ -249,7 +246,6 @@ use Other\MyClass;
 /**
  * Foo
  *
- * @package Vendor\Bar\Baz
  */
 class Foo
 {
@@ -776,7 +772,6 @@ namespace Vendor\Foo;
 /**
  * Interface Foo
  *
- * @package Vendor\Foo
  */
 interface FooInterface
 {
@@ -801,7 +796,6 @@ namespace Vendor\Foo;
 /**
  * Trait Foo
  *
- * @package Vendor\Foo
  */
 trait FooTrait
 {
