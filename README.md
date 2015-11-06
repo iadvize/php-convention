@@ -2,6 +2,7 @@
 
 ## <a name='TOC'>Table of Contents</a>
 
+  1. [IDE Integration](#installation)
   1. [Files](#files)
   1. [Lines](#lines)
   1. [Keywords](#keywords)
@@ -18,6 +19,10 @@
   1. [Control Structures](#control-structures)
   1. [Closures](#closures)
   1. [Best practices](#best-practices)
+
+## <a name='installation'>IDE integration</a>
+
+[![Configure your PHPStorm](https://infinit.io/_/rF5xJXT.png)](https://www.youtube.com/watch?v=7XO5crQkR4Y)
 
 ## <a name='files'>Files</a>
 
