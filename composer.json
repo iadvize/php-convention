@@ -6,7 +6,6 @@
     "quality",
     "php"
   ],
-  "version": "0.1.0",
   "type": "project",
   "authors": [
     {
@@ -20,5 +19,10 @@
     "phpmd/phpmd": "^2.3.2",
     "fabpot/PHP-CS-Fixer": "*",
     "escapestudios/symfony2-coding-standard": "~2.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "./vendor/bin/phpcs --config-set installed_paths $PWD/vendor/escapestudios/symfony2-coding-standard"
+    ]
   }
 }
