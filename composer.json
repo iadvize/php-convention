@@ -6,11 +6,16 @@
     "quality",
     "php"
   ],
-  "type": "project",
+  "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Rémy Théroux",
       "email": "remy.theroux@iadvize.com"
+    },
+    {
+      "name": "Marc Fricou",
+      "email": "marc.fricou@iadvize.com"
     }
   ],
   "require": {
