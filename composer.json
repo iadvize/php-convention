@@ -6,7 +6,8 @@
     "quality",
     "php"
   ],
-  "type": "project",
+  "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Rémy Théroux",
