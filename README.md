@@ -24,6 +24,12 @@
 
 [![Configure your PHPStorm](https://infinit.io/_/rF5xJXT.png)](https://www.youtube.com/watch?v=7XO5crQkR4Y)
 
+### Troubleshooting
+
+If you have this `phpcs: PHP Fatal error:  Uncaught exception 'PHP_CodeSniffer_Exception' with message 'Referenced sniff "Symfony2" does not exist'`
+
+Launch this: `./vendor/bin/phpcs --config-set installed_paths $PWD/vendor/escapestudios/symfony2-coding-standard,$PWD/vendor/iadvize/php-convention/phpcs`
+
 ## <a name='files'>Files</a>
 
   - Use only `UTF-8 without BOM`.
