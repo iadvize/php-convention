@@ -80,7 +80,7 @@
     </rule>
     <rule ref="rulesets/design.xml/DepthOfInheritance">
         <properties>
-            <property name="minimum" value="3" description="Maximum number of acceptable parent classes." />
+            <property name="minimum" value="4" description="Maximum number of acceptable parent classes." />
         </properties>
     </rule>
     <rule ref="rulesets/design.xml/CouplingBetweenObjects">
