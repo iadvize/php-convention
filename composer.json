@@ -16,14 +16,18 @@
     {
       "name": "Marc Fricou",
       "email": "marc.fricou@iadvize.com"
+    },
+    {
+      "name": "Julien Breux",
+      "email": "julien.breux@gmail.com"
     }
   ],
   "require": {
-    "php": ">=5.4.23",
-    "squizlabs/php_codesniffer": "2.*",
-    "phpmd/phpmd": "^2.3.2",
-    "fabpot/PHP-CS-Fixer": "*",
-    "escapestudios/symfony2-coding-standard": "~2.0"
+    "php": ">=5.6",
+    "squizlabs/php_codesniffer": "2.6.*",
+    "phpmd/phpmd": "2.4.*",
+    "friendsofphp/php-cs-fixer": "1.11.*",
+    "escapestudios/symfony2-coding-standard": "2.9.*"
   },
   "scripts": {
     "post-install-cmd": [
