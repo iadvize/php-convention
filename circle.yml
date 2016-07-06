@@ -1,0 +1,9 @@
+machine:
+  php:
+    version: 5.6.23
+dependencies:
+  cache_directories:
+    - "~/.composer"
+  # Build docker image
+  override:
+    - composer install --no-progress --no-interaction
