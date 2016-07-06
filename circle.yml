@@ -4,6 +4,6 @@ machine:
 dependencies:
   cache_directories:
     - "~/.composer"
-  # Build docker image
+test:
   override:
     - composer install --no-progress --no-interaction
