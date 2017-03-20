@@ -100,7 +100,7 @@
     </rule>
     <rule ref="rulesets/naming.xml/ShortVariable">
         <properties>
-            <property name="minimum" description="Minimum length for a variable, property or parameter name" value="3"/>
+            <property name="minimum" description="Minimum length for a variable, property or parameter name" value="2"/>
             <property name="exceptions" value="id,em,e"/>
         </properties>
     </rule>
