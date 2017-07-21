@@ -519,28 +519,38 @@ $foo .= ' baz';
 
 ```php
 // bad
-const MAXSIZE = 5;
+const MAXSIZE=5;
 
 // bad
-const max_size = 4;
+const max_size∙=∙4;
 
 // good
-const MAX_SIZE ∙=∙ 5;
+const MAX_SIZE∙=∙5;
 ```
+  - You must set assignment operator with spaces.
+  
+```php
+// bad
+const MAX_SIZE=5;
+
+// good
+const MAX_SIZE∙=∙5;
+```
+
   - You must conserve a great alignment.
 
 ```php
 // bad
-const FOO = 'Ba';
-const FOO .= 'r';
-const QUUX = 'Qu';
-const QUUX .= 'x';
+const FOO∙∙=∙'Ba';
+const FOO∙∙=∙'r';
+const QUUX∙=∙'Qu';
+const QUUX∙=∙'x';
 
 // good
-const FOO .= 'Ba';
-const FOO .= 'r';
-const QUUX = 'Qu';
-const QUUX = 'x';
+const FOO∙∙=∙'Ba';
+const FOO∙∙=∙'r';
+const QUUX∙=∙'Qu';
+const QUUX∙=∙'x';
 ```
 
 ## <a name='type-casting'>Type casting</a>
