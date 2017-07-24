@@ -9,6 +9,7 @@
   1. [Comments](#comments)
   1. [Naming](#naming)
   1. [Variables](#variables)
+  1. [Constants](#constants)
   1. [Type casting](#type-casting)
   1. [Namespaces and use declarations](#namespaces-use)
   1. [String](#strings)
@@ -508,6 +509,48 @@ $foo = $foo . ' baz';
 // very good
 $foo  = ucfirst('bar');
 $foo .= ' baz';
+```
+
+## <a name='constants'>Constants</a>
+
+### Class constants
+
+  - Constants must be in `UPPER_SNAKE_CASE`.
+
+```php
+// bad
+const MAXSIZE=5;
+
+// bad
+const max_size∙=∙4;
+
+// good
+const MAX_SIZE∙=∙5;
+```
+  - You must set assignment operator with spaces.
+  
+```php
+// bad
+const MAX_SIZE=5;
+
+// good
+const MAX_SIZE∙=∙5;
+```
+
+  - You must conserve a great alignment.
+
+```php
+// bad
+const FOO∙∙=∙'Ba';
+const FOO∙∙=∙'r';
+const QUUX∙=∙'Qu';
+const QUUX∙=∙'x';
+
+// good
+const FOO∙∙=∙'Ba';
+const FOO∙∙=∙'r';
+const QUUX∙=∙'Qu';
+const QUUX∙=∙'x';
 ```
 
 ## <a name='type-casting'>Type casting</a>
