@@ -24,10 +24,5 @@
     "phpmd/phpmd": "^2.3.2",
     "friendsofphp/php-cs-fixer": "*",
     "escapestudios/symfony2-coding-standard": "~3.0"
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "./vendor/bin/phpcs --config-set installed_paths $PWD/vendor/escapestudios/symfony2-coding-standard"
-    ]
   }
 }
