@@ -1,9 +1,14 @@
 <?php
 
+namespace Iadvize\Sniffs\Functions;
+
+use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Sniffs\Sniff;
+
 /**
  * Class Iadvize_Sniffs_Functions_OpeningFunctionBraceBsdAllmanSniff
  */
-class Iadvize_Sniffs_Functions_OpeningFunctionBraceBsdAllmanSniff implements PHP_CodeSniffer_Sniff
+class OpeningFunctionBraceBsdAllmanSniff implements Sniff
 {
 
     /**
@@ -37,13 +42,13 @@ class Iadvize_Sniffs_Functions_OpeningFunctionBraceBsdAllmanSniff implements PHP
     /**
      * Processes this test, when one of its tokens is encountered.
      *
-     * @param PHP_CodeSniffer_File $phpcsFile The file being scanned.
+     * @param File $phpcsFile The file being scanned.
      * @param int                  $stackPtr  The position of the current token in the
      *                                        stack passed in $tokens.
      *
      * @return void
      */
-    public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr)
     {
 
         $tokens = $phpcsFile->getTokens();

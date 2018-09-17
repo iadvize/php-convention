@@ -12,16 +12,20 @@
 	<rule ref="PSR1" />
 	<rule ref="PSR2" />
 
-    <rule ref="Symfony2">
+    <rule ref="Symfony">
         <exclude name="Squiz.Strings.ConcatenationSpacing" />
-        <exclude name="Symfony2.Functions.ScopeOrder" />
-        <exclude name="Symfony2.Objects.ObjectInstantiation" />
+        <exclude name="Symfony.Functions.ScopeOrder" />
+        <exclude name="Symfony.Functions.Arguments" />
         <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman" />
+        <exclude name="Symfony.Objects.ObjectInstantiation" />
+        <exclude name="Symfony.Commenting.License" />
+        <exclude name="Symfony.Commenting.ClassComment" />
+        <exclude name="Symfony.ControlStructure" />
     </rule>
 
     <rule ref="Squiz.Strings.DoubleQuoteUsage" />
     <rule ref="Generic.Formatting.MultipleStatementAlignment" />
-	
+
 	<rule ref="Generic.Files.LineLength">
         <properties>
             <property name="lineLimit" value="200"/>
