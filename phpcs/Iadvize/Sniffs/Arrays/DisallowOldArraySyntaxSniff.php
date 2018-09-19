@@ -1,9 +1,13 @@
 <?php
+namespace Iadvize\Sniffs\Arrays;
+
+use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
  * Class DisallowOldArraySyntax
  */
-class Iadvize_Sniffs_Arrays_DisallowOldArraySyntaxSniff implements PHP_CodeSniffer_Sniff
+class DisallowOldArraySyntaxSniff implements Sniff
 {
     /**
      * {@inheritdoc}
@@ -18,7 +22,7 @@ class Iadvize_Sniffs_Arrays_DisallowOldArraySyntaxSniff implements PHP_CodeSniff
     /**
      * {@inheritdoc}
      */
-    public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr)
     {
         $phpcsFile->addError(
             'Old array syntax (array()) is not allowed use [] instead',

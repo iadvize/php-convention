@@ -1,9 +1,0 @@
-machine:
-  php:
-    version: 5.6.2
-dependencies:
-  cache_directories:
-    - "~/.composer"
-test:
-  override:
-    - composer install --no-progress --no-interaction

@@ -1,9 +1,14 @@
 <?php
 
+namespace Iadvize\Sniffs\Formatting;
+
+use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Sniffs\Sniff;
+
 /**
  * Class NotMoreThanOneBlankLineSniff
  */
-class Iadvize_Sniffs_Formatting_NotMoreThanOneBlankLineSniff implements PHP_CodeSniffer_Sniff
+class NotMoreThanOneBlankLineSniff implements Sniff
 {
     /**
      * {@inheritdoc}
@@ -18,7 +23,7 @@ class Iadvize_Sniffs_Formatting_NotMoreThanOneBlankLineSniff implements PHP_Code
     /**
      * {@inheritdoc}
      */
-    public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr)
     {
         $tokens        = $phpcsFile->getTokens();
         $currentToken  = $tokens[$stackPtr];
@@ -31,7 +36,7 @@ class Iadvize_Sniffs_Formatting_NotMoreThanOneBlankLineSniff implements PHP_Code
             $currentToken['content'] === "\n" &&
             $previousToken['content'] === "\n"
         ) {
-            $phpcsFile->addError('There must not be more than one blank line juxtaposed.', $stackPtr);
+            $phpcsFile->addError('There must not be more than one blank line juxtaposed.', $stackPtr, 'Invalid');
         }
     }
 }

@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: iadvize/builder:docker-17.06
+    working_directory: ~/php-convention
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 17.06.1-ce
+          reusable: true
+      - run:
+          name: Log to docker
+          command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - run:
+          name: test installation
+          command: |
+            docker build -t iadvize/php-convention:$CIRCLE_BRANCH$CIRCLE_TAG -t iadvize/php-convention:test .
+workflows:
+  version: 2
+  build-n-test:
+    jobs:
+      - build:
+          context: org-global
+          filters:
+            tags:
+              only: /.*/
