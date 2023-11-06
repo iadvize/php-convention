@@ -6,9 +6,7 @@ jobs:
     working_directory: ~/php-convention
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 17.06.1-ce
-          reusable: true
+      - setup_remote_docker
       - run:
           name: Log to docker
           command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
