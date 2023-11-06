@@ -25,11 +25,11 @@
 
     <rule ref="Squiz.Strings.DoubleQuoteUsage" />
     <rule ref="Generic.Formatting.MultipleStatementAlignment" />
-
 	<rule ref="Generic.Files.LineLength">
         <properties>
             <property name="lineLimit" value="200"/>
             <property name="absoluteLineLimit" value="200"/>
         </properties>
     </rule>
+    <rule ref="Generic.PHP.Syntax" />
 </ruleset>
