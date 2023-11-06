@@ -2,10 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: iadvize/builder:docker-17.06
-        auth:
-          username: $DOCKER_USERNAME
-          password: $DOCKER_PASSWORD
+      - image: cimg/base:current
     working_directory: ~/php-convention
     steps:
       - checkout
