@@ -4,7 +4,7 @@
 # DOCKER-VERSION   : 17.06
 ##
 
-FROM php:7.2
+FROM php:7.3
 
 COPY composer.* /app/
 
