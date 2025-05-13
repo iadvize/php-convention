@@ -1,3 +1,5 @@
+# DEPRECATED, move to https://docs.iadvize.io/RFCs/php/?h=php
+
 # iAdvize PHP Style Guide
 
 ## <a name='TOC'>Table of Contents</a>
